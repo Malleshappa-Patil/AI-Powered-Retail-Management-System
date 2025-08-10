@@ -106,7 +106,7 @@ Ensure you have the following software installed:
     >     node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
     >     ```
     >     Copy the long string that is generated and paste it as the value for `JWT_SECRET` in your `.env` file.
-    ```
+    
 5.  **Start the backend server:**
     ```bash
     node server.js
