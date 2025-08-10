@@ -54,106 +54,107 @@ inventory-tracking-system/
         └── App.js# Inventory-Tracking-System
 
 
-🚀 Getting Started
+## 🚀 Getting Started
+
 Follow these instructions to get the project up and running on your local machine.
 
-Prerequisites
+### **1. Prerequisites**
+
 Ensure you have the following software installed:
+-   [Node.js](https://nodejs.org/) (LTS version recommended)
+-   [MySQL Server](https://dev.mysql.com/downloads/mysql/)
+-   [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+-   A code editor like [VS Code](https://code.visualstudio.com/)
 
-Node.js (LTS version recommended)
+---
 
-[suspicious link removed]
+### **2. Database Setup**
 
-MongoDB Community Server
+1.  **Start Services:** Ensure both your MySQL and MongoDB servers are running.
+2.  **Create MySQL Database:** Log into your MySQL client and run the following command:
+    ```sql
+    CREATE DATABASE inventory_db;
+    ```
+3.  **Create Tables & Data:** Use the new database (`USE inventory_db;`) and then execute the **entire SQL script** provided in the project files. This will create all necessary tables and insert sample data.
 
-A code editor like VS Code
+---
 
-1. Database Setup
-Start MySQL and MongoDB: Ensure both database servers are running on your machine.
+### **3. Backend Setup**
 
-Create MySQL Database: Log into your MySQL client and run the following command:
+1.  **Navigate to the backend folder:**
+    ```bash
+    cd backend
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Create environment file:**
+    ```bash
+    cp .env.example .env
+    ```
+4.  **Configure `.env` file:** Open the new `.env` file and fill in your details:
+    ```
+    MYSQL_USER=your_mysql_username
+    MYSQL_PASSWORD=your_mysql_password
+    JWT_SECRET=your_super_secret_random_string
+    ```
+5.  **Start the backend server:**
+    ```bash
+    node server.js
+    ```
+    The server should now be running on `http://localhost:5001`.
 
-SQL
+---
 
-CREATE DATABASE inventory_db;
-Create Tables & Data: Use the new database (USE inventory_db;) and then execute the entire SQL script provided in the project files to create all necessary tables and insert sample data.
+### **4. Frontend Setup**
 
-2. Backend Setup
-Navigate to the backend folder:
+1.  **Open a new terminal window.**
+2.  **Navigate to the frontend folder:**
+    ```bash
+    cd frontend
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the frontend server:**
+    ```bash
+    npm start
+    ```
+    Your browser should automatically open to `http://localhost:3000`.
 
-Bash
+---
 
-cd backend
-Install dependencies:
+### **5. Usage**
 
-Bash
+-   Navigate to `http://localhost:3000`.
+-   **Sign up** for a new user account, or log in with the default admin credentials:
+    -   **Username:** `admin`
+    -   **Password:** `admin123`
+-   Explore the application!
 
-npm install
-Create environment file: Copy the .env.example file to a new file named .env.
+---
 
-Bash
+## 📄 API Endpoints
 
-cp .env.example .env
-Configure .env: Open the .env file and fill in your MySQL credentials and a custom JWT_SECRET.
-
-MYSQL_USER=your_mysql_username
-MYSQL_PASSWORD=your_mysql_password
-JWT_SECRET=your_super_secret_random_string
-Start the backend server:
-
-Bash
-
-node server.js
-The server should now be running on http://localhost:5001.
-
-3. Frontend Setup
-Open a new terminal window.
-
-Navigate to the frontend folder:
-
-Bash
-
-cd frontend
-Install dependencies:
-
-Bash
-
-npm install
-Start the frontend server:
-
-Bash
-
-npm start
-Your browser should automatically open to http://localhost:3000.
-
-4. Usage
-Navigate to http://localhost:3000.
-
-Sign up for a new user account, or log in with the default admin credentials:
-
-Username: admin
-
-Password: admin123
-
-Explore the application!
-
-📄 API Endpoints
 A brief overview of the main API routes available:
 
-POST /api/users/register: Create a new user account.
+-   `POST /api/users/register`: Create a new user account.
+-   `POST /api/users/login`: Log in and receive a JWT.
+-   `GET /api/products`: Fetch all products or products by category.
+-   `POST /api/products`: (Admin) Add a new product.
+-   `PUT /api/products/:id`: (Admin) Update product details.
+-   `PUT /api/products/:id/image`: (Admin) Update a product's image.
+-   `DELETE /api/products/:id`: (Admin) Delete a product.
+-   `POST /api/billing/checkout`: Process a user's shopping cart and record the sale.
 
-POST /api/users/login: Log in and receive a JWT.
+---
 
-GET /api/products: Fetch all products or products by category.
+## 📧 Contact
 
-POST /api/products: (Admin) Add a new product.
+For any questions or feedback regarding this project, feel free to reach out.
 
-PUT /api/products/:id: (Admin) Update product details.
-
-PUT /api/products/:id/image: (Admin) Update a product's image.
-
-DELETE /api/products/:id: (Admin) Delete a product.
-
-POST /api/billing/checkout: Process a user's shopping cart and record the sale.
+-   **Email:** `mdpatil2004@gmail.com`
 
 Thank you for checking out the project!
