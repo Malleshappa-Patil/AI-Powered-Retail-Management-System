@@ -53,7 +53,7 @@ inventory-tracking-system/
         ├── services/
         └── App.js# Inventory-Tracking-System
 
-
+```
 ## 🚀 Getting Started
 
 Follow these instructions to get the project up and running on your local machine.
