@@ -52,3 +52,108 @@ inventory-tracking-system/
         ├── pages/
         ├── services/
         └── App.js# Inventory-Tracking-System
+
+
+🚀 Getting Started
+Follow these instructions to get the project up and running on your local machine.
+
+Prerequisites
+Ensure you have the following software installed:
+
+Node.js (LTS version recommended)
+
+[suspicious link removed]
+
+MongoDB Community Server
+
+A code editor like VS Code
+
+1. Database Setup
+Start MySQL and MongoDB: Ensure both database servers are running on your machine.
+
+Create MySQL Database: Log into your MySQL client and run the following command:
+
+SQL
+
+CREATE DATABASE inventory_db;
+Create Tables & Data: Use the new database (USE inventory_db;) and then execute the entire SQL script provided in the project files to create all necessary tables and insert sample data.
+
+2. Backend Setup
+Navigate to the backend folder:
+
+Bash
+
+cd backend
+Install dependencies:
+
+Bash
+
+npm install
+Create environment file: Copy the .env.example file to a new file named .env.
+
+Bash
+
+cp .env.example .env
+Configure .env: Open the .env file and fill in your MySQL credentials and a custom JWT_SECRET.
+
+MYSQL_USER=your_mysql_username
+MYSQL_PASSWORD=your_mysql_password
+JWT_SECRET=your_super_secret_random_string
+Start the backend server:
+
+Bash
+
+node server.js
+The server should now be running on http://localhost:5001.
+
+3. Frontend Setup
+Open a new terminal window.
+
+Navigate to the frontend folder:
+
+Bash
+
+cd frontend
+Install dependencies:
+
+Bash
+
+npm install
+Start the frontend server:
+
+Bash
+
+npm start
+Your browser should automatically open to http://localhost:3000.
+
+4. Usage
+Navigate to http://localhost:3000.
+
+Sign up for a new user account, or log in with the default admin credentials:
+
+Username: admin
+
+Password: admin123
+
+Explore the application!
+
+📄 API Endpoints
+A brief overview of the main API routes available:
+
+POST /api/users/register: Create a new user account.
+
+POST /api/users/login: Log in and receive a JWT.
+
+GET /api/products: Fetch all products or products by category.
+
+POST /api/products: (Admin) Add a new product.
+
+PUT /api/products/:id: (Admin) Update product details.
+
+PUT /api/products/:id/image: (Admin) Update a product's image.
+
+DELETE /api/products/:id: (Admin) Delete a product.
+
+POST /api/billing/checkout: Process a user's shopping cart and record the sale.
+
+Thank you for checking out the project!
