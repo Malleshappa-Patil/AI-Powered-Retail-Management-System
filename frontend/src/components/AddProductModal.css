@@ -1,0 +1,64 @@
+/* src/components/AddProductModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+}
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.file-input-label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: -0.5rem;
+}
+
+/* At the end of src/components/AddProductModal.css */
+.wide-modal {
+    max-width: 800px;
+}
+.search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search-results {
+    max-height: 60vh;
+    overflow-y: auto;
+}

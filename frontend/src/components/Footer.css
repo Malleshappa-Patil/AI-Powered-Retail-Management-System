@@ -1,0 +1,74 @@
+/* frontend/src/components/Footer.css */
+
+.footer-container {
+    background-color: #0c1426; /* A dark, professional blue */
+    color: #a9b3c6; /* A light, readable grey-blue */
+    padding: 3rem 2rem 1rem 2rem;
+    margin-top: 3rem; /* Pushes footer away from page content */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-column a {
+    color: #a9b3c6;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-column a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-column p {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #2d3748;
+    font-size: 0.8rem;
+}

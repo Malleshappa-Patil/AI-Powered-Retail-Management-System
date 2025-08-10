@@ -1,0 +1,37 @@
+/* src/App.css */
+.App {
+  text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary { 
+    background-color: var(--primary-color); 
+    color: white; 
+}
+.btn-primary:hover { 
+    background-color: #560a8b; 
+}
+
+.btn-secondary { 
+    background-color: #e0e0e0; 
+    color: #333; 
+}
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+}
+.App-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content-wrapper {
+  flex: 1;
+}

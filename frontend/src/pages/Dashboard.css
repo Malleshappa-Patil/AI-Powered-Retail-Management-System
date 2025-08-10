@@ -1,0 +1,58 @@
+/* At the end of src/pages/Dashboard.css */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* At the end of src/pages/Dashboard.css */
+.back-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  position: absolute;
+  top: 1.5rem; /* Adjust as needed */
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.product-grid {
+  display: grid;
+  /* This line is changed to create 4 equal columns */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 1.5rem;
+  margin:0px 10px 0px 10px;
+}
+
+.dashboard-header {
+    display: flex;
+    flex-direction: column;  /* Stacks the title and button vertically */
+    justify-content: center;
+    align-items: center;     /* Centers everything horizontally */
+    margin-bottom: 1rem;
+    
+    /* Adds a nice space between the title and button */
+    /* gap: rem; */
+}
