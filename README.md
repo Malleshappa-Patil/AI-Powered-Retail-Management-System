@@ -93,11 +93,19 @@ Ensure you have the following software installed:
     ```bash
     cp .env.example .env
     ```
-4.  **Configure `.env` file:** Open the new `.env` file and fill in your details:
-    ```
-    MYSQL_USER=your_mysql_username
-    MYSQL_PASSWORD=your_mysql_password
-    JWT_SECRET=your_super_secret_random_string
+4.  **Configure `.env` file:** Open the new `.env` file and fill in your MySQL credentials and a custom `JWT_SECRET`.
+
+    > #### **Generating Your `JWT_SECRET`**
+    > The `JWT_SECRET` is a private key that you create yourself. It's used to sign and verify the authenticity of user login tokens. It must be a long, random, and unpredictable string.
+    >
+    > -   **For quick development,** you can invent any long phrase:
+    >     `JWT_SECRET=my-super-secure-inventory-app-secret-phrase-2025`
+    >
+    > -   **For better security (Recommended),** generate a random string using this command in your terminal:
+    >     ```bash
+    >     node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+    >     ```
+    >     Copy the long string that is generated and paste it as the value for `JWT_SECRET` in your `.env` file.
     ```
 5.  **Start the backend server:**
     ```bash
