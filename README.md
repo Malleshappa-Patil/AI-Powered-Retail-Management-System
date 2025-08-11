@@ -1,7 +1,5 @@
 # AI-Powered Retail Management System
 
-### ✨ [View the Interactive Project Hub](https://your-username.github.io/your-repo-name) ✨
-
 ---
 
 A complete, full-stack web application designed for small businesses to manage product inventory, track sales, and provide a seamless shopping experience. This project features a modern React frontend and a robust backend powered by Node.js, Express.js, and a hybrid database system using both MySQL and MongoDB.
