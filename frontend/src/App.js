@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import Dashboard from './pages/Dashboard';
 import CategoryPage from './pages/CategoryPage';
+import ReportsPage from './pages/ReportsPage';
 
 // Context and Component Imports
 import { AuthProvider } from './context/AuthContext';
@@ -41,6 +42,8 @@ function App() {
                 
                 {/* Wildcard route to redirect any unknown URL to the dashboard */}
                 <Route path="*" element={<Navigate to="/dashboard" />} />
+                <Route path="/reports" element={<PrivateRoute><ReportsPage /></PrivateRoute>} />
+
               </Routes>
             </div>
             <Footer />

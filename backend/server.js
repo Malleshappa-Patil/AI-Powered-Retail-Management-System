@@ -7,6 +7,7 @@ const pool = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes =require('./routes/productRoutes');
 const billingRoutes = require('./routes/billingRoutes');
+const aiRoutes = require('./routes/aiRoutes');
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/billing', billingRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Simple health check route
 app.get('/', (req, res) => {
