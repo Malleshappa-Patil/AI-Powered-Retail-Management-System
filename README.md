@@ -108,6 +108,7 @@ Ensure you have the following software installed:
     ```
 2.  **Install dependencies:**
     ```bash
+    npm install simple-statistics
     npm install
     ```
 3.  **Create environment file:**
