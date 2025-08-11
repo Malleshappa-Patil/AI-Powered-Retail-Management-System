@@ -73,7 +73,7 @@ AI-Powered Retail Management System/
         ├── pages/
         ├── services/
         ├── App.js
-        └── index.js                                     |
+        └── index.js
 
 
 ```
