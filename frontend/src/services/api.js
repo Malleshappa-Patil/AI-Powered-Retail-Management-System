@@ -1,9 +1,8 @@
-// frontend/src/services/api.js
 import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'http://localhost:5001/api',
-});
+}); 
 
 // Request interceptor to add the auth token to every request
 api.interceptors.request.use((config) => {
